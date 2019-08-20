@@ -7,11 +7,12 @@ import { Configuration } from './config/config.keys';
 import { DatabaseModule } from './database/database.module';
 import { UserModule } from './modules/user/user.module';
 import { RoleModule } from './modules/role/role.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   controllers: [AppController],
   providers: [AppService],
-  imports: [ConfigModule, DatabaseModule, UserModule, RoleModule],
+  imports: [ConfigModule, DatabaseModule, UserModule, RoleModule, AuthModule],
 })
 export class AppModule {
   static port: number | string;
