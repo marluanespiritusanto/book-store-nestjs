@@ -13,7 +13,7 @@ export const databaseProviders = [
         type: 'postgres' as 'postgres',
         host: config.get(Configuration.HOST),
         username: config.get(Configuration.USERNAME),
-        port: 5444,
+        port: 5432,
         database: config.get(Configuration.DATABASE),
         password: config.get(Configuration.PASSWORD),
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
