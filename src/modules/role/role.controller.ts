@@ -10,6 +10,7 @@ import {
 } from '@nestjs/common';
 import { RoleService } from './role.service';
 import { ReadRoleDto } from './dtos';
+import { CreateBookDto } from '../book/dtos';
 
 @Controller('roles')
 export class RoleController {
@@ -26,7 +27,7 @@ export class RoleController {
   }
 
   @Post()
-  createRole(@Body() role: Partial<ReadRoleDto>): Promise<ReadRoleDto> {
+  createRole(@Body() role: Partial<CreateBookDto>): Promise<ReadRoleDto> {
     return this._roleService.create(role);
   }
 
